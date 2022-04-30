@@ -1,8 +1,56 @@
 <template>
 	<div class="app slds-p-around_x-large">
 		<h1 class="slds-text-heading_large">{title}</h1>
-		<h3>Write JavaScript, HTML, and CSS code, and preview the output in the interactive code editor.</h3>
 
+		<div>
+			<br></br>
+			<h2 class="slds-text-heading_medium">Ratnagiri Alphanso
+				<lightning-button disabled={disableButton} label="Select" title="Non-primary action" onclick={loadDetails}
+					class="slds-m-left_x-small">
+				</lightning-button>
+			</h2>
+		</div>
+		<div id="display" if:true={ready}>
+			<h2><Strong>{details}</strong></h2>
+			<h3>{details1}
+				<lightning-button-menu alternative-text="Show menu" label="ADD">
+					<lightning-menu-item value="MenuItemOne" label="Two Dozen" onclick={showSuccessToast}></lightning-menu-item>
+					<lightning-menu-item value="MenuItemTwo" label="Four Dozen"></lightning-menu-item>
+					<lightning-menu-item value="MenuItemThree" label="Six Dozen"></lightning-menu-item>
+				</lightning-button-menu>
+			</h3>
+			<h3>{details2}<lightning-button label="ADD" title="Non-primary action" onclick={loadDetails}
+					class="slds-m-left_xx-small">
+				</lightning-button>
+			</h3>
+			<h3>{details3}<lightning-button label="ADD" title="Non-primary action" onclick={loadDetails}
+					class="slds-m-left_xx-small">
+				</lightning-button>
+			</h3>
+		</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+		<!----->
 		<!-- Using an if statement -->
 		<template if:true={showFeatures}>
 			<div class="slds-p-top_large">
@@ -20,8 +68,7 @@
 		</template>
 
 		<h2 class="slds-text-heading_medium slds-p-top_large">Resources</h2>
-		<a
-			href="https://developer.salesforce.com/docs/component-library/documentation/en/lwc/lwc.get_started_introduction">
+		<a href="https://developer.salesforce.com/docs/component-library/documentation/en/lwc/lwc.get_started_introduction">
 			Developer Guide
 		</a><br/>
 		<a href="https://developer.salesforce.com/docs/component-library/overview/components">Component Reference</a>

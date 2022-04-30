@@ -1,6 +1,16 @@
 h1 {
     color: rgb(0, 112, 210);
 }
+h2 {
+    color: rgb(232, 158, 32);
+}
+h3 {
+    font-size: 15px;
+}
+strong {
+     color: rgb(7, 0, 0);
+     font-size: 16px;
+}
 p {
     font-family: 'Salesforce Sans', Arial, sans-serif;
     color: rgb(62, 62, 60);
