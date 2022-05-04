@@ -2,19 +2,29 @@ import { LightningElement } from "lwc";
 import { ShowToastEvent } from 'lightning/platformShowToastEvent';
 
 export default class App extends LightningElement {
-  title = "Orders Mangoes for the season now!!!";
+  title = "Order Mangoes for the season now!!!";
   details;
   details1;
   details2;
   details3;
   disableButton = false;
   ready = false;
+  text;
+  message;
  
-  
-  showFeatures = true;
 
+ 
+  showFeatures = true;
+  
+  
+  
+  
   loadDetails(event) {
-    this.ready = true;
+    this.text = "Loading Details..."
+
+    setTimeout(() => {
+           this.ready = true;
+       }, 3000);
     this.details = "Cost per dozen";
     this.details1 = "Small Size 700rs";
     this.details2 = "Medium Size 800rs";
@@ -25,14 +35,18 @@ export default class App extends LightningElement {
   }
 
   showSuccessToast() {
-        const evt = new ShowToastEvent({
-            title: 'Toast Success',
-            message: 'Opearion sucessful',
-            variant: 'success',
-            mode: 'dismissable'
-        });
-        this.dispatchEvent(evt);
+
+         this.message = event.target.label
+         alert(this.message + " mangoes added to cart");
     }
+
+
+  /* *   ready = false;
+   connectedCallback() {
+       setTimeout(() => {
+           this.ready = true;
+       }, 3000);
+   }*/
 
   /**
    * Getter for the features property

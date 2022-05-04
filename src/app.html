@@ -4,19 +4,21 @@
 
 		<div>
 			<br></br>
+			<img src={pictureUrl}/>
 			<h2 class="slds-text-heading_medium">Ratnagiri Alphanso
 				<lightning-button disabled={disableButton} label="Select" title="Non-primary action" onclick={loadDetails}
 					class="slds-m-left_x-small">
 				</lightning-button>
 			</h2>
 		</div>
+		<strong>{text}</strong>
 		<div id="display" if:true={ready}>
 			<h2><Strong>{details}</strong></h2>
 			<h3>{details1}
 				<lightning-button-menu alternative-text="Show menu" label="ADD">
 					<lightning-menu-item value="MenuItemOne" label="Two Dozen" onclick={showSuccessToast}></lightning-menu-item>
-					<lightning-menu-item value="MenuItemTwo" label="Four Dozen"></lightning-menu-item>
-					<lightning-menu-item value="MenuItemThree" label="Six Dozen"></lightning-menu-item>
+					<lightning-menu-item value="MenuItemTwo" label="Four Dozen" onclick={showSuccessToast}></lightning-menu-item>
+					<lightning-menu-item value="MenuItemThree" label="Six Dozen" onclick={showSuccessToast}></lightning-menu-item>
 				</lightning-button-menu>
 			</h3>
 			<h3>{details2}<lightning-button label="ADD" title="Non-primary action" onclick={loadDetails}
@@ -28,6 +30,8 @@
 				</lightning-button>
 			</h3>
 		</div>
+
+
 
 
 
